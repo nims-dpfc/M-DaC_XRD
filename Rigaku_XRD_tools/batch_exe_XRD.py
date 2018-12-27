@@ -27,10 +27,12 @@ readfile = options.file_path
 basename = os.path.basename(readfile)
 dirname = os.path.dirname(readfile)
 name, ext = os.path.splitext(basename)
+currentdir = os.getcwd()
 
 sourcedir = dirname
 resultdir = "../result/"
 tooldir = "./"
+
 
 if os.path.isdir("temp"):
     shutil.rmtree("./temp")
@@ -49,7 +51,7 @@ os.chdir(resultdir)
 if os.path.isdir(name):
     shutil.rmtree(name)
 os.mkdir(name)
-os.chdir("../Rigaku_XRD_tools(batch)/")
+os.chdir(currentdir)
 for file in glob.glob(r'temp/*'):
     shutil.move(file, resultdir + name)
 shutil.rmtree("temp")

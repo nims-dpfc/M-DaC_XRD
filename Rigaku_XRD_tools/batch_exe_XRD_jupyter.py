@@ -52,6 +52,7 @@ basename = os.path.basename(readfile)
 dirname = os.path.dirname(readfile)
 name, ext = os.path.splitext(basename)
 org_name = name
+currentdir = os.getcwd()
 axis = []
 
 sourcedir = dirname
@@ -473,9 +474,13 @@ file.close()
 dom.unlink()
 os.remove(basename)
 os.chdir("../")
-if os.path.isdir(resultdir + name):
-    shutil.rmtree(resultdir + name)
-os.mkdir(resultdir + name)
+if not(os.path.isdir(resultdir)):
+    os.mkdir(resultdir)
+os.chdir(resultdir)
+if os.path.isdir(name):
+    shutil.rmtree(name)
+os.mkdir(name)
+os.chdir(currentdir)
 for file in glob.glob(r'temp/*'):
     shutil.move(file, resultdir + name)
 shutil.rmtree("temp")

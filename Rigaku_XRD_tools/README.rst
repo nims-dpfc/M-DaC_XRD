@@ -14,8 +14,8 @@ ras2raw_XRD.py		 rasファイルから装置出力パラメータを抽出する
 xrd_raw_template.xml	 装置出力パラメータ抽出に使用するテンプレートファイル
 raw2primary_XRD.py	 装置出力パラメータファイルから主要パラメータを抽出するツール
 xrd_primary_template.xml 主要パラメータ抽出に使用するテンプレートファイル
-execute.py		 rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までを一度に行うツール
-execute_jupyter.py	 rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までをjupyter notebook上で一度に行い、図の表示、主要パラメータを表示するツール
+batch_exe_XRD.py	 rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までを一度に行うツール
+batch_exe_XRD_jupyter.py rasファイルからスペクトルの図作成、装置出力パラメータ、主要パラメータの抽出までをjupyter notebook上で一度に行い、図の表示、主要パラメータを表示するツール
 README.rst		 使い方の説明
 ======================== =========================================================================================================================================================
 
@@ -52,7 +52,7 @@ rasファイルから装置出力パラメータを抽出します::
 各プログラムの基本的な使い方は上に示した通りですが、上記のコマンドをまとめて実行できると便利です。
 execute_XRD.py は、上記のコマンドをまとめて行うプログラムです。::
 
-	python execute_XRD.py ../source/XRD_RIGAKU.ras
+	python batch_exe_XRD.py ../source/XRD_RIGAKU.ras
 
 を実行すると、../XRD_RIGAKUというフォルダを作成し、その中にFND(Formatted Numerical Data)、
 スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
@@ -60,7 +60,7 @@ execute_XRD.py は、上記のコマンドをまとめて行うプログラム�
 
 jupyter notebook 上で画像やパラメータの確認を行いながら実行するには execute_XRD_jupyter.py を使用してください。::
 
-	python execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
+	%run -i execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
 
 
 For more information, refer to the `the documentation`__.

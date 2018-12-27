@@ -2,6 +2,14 @@
 Usage of XRD tools for Jupyter Notebook
 =======================================
 
+.. note::
+
+    Jupyter Notebookでグラフ表示を行う場合には、plotlyを使用しています。::
+
+    	pip install plotly
+
+    を実行して、plotlyをインストールしてください。
+
 .. code:: ipython3
 
     %run -i ras2csv.py --encoding sjis ../source/XRD_RIGAKU.ras
@@ -25,9 +33,11 @@ Usage of XRD tools for Jupyter Notebook
 バッチ処理
 ----------
 
+以下のコマンドを実行すると、グラフの描画と主要パラメータを表示します。
+
 .. code:: ipython3
 
-    %run -i execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
+    %run -i batch_exe_XRD_jupyter.py ../source/XRD_RIGAKU.ras
 
 
 .. image:: newplot2.png

@@ -36,13 +36,13 @@ csvファイルから画像を作成します::
 
 rasファイルから装置出力パラメータを抽出します::
 
-	python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml raw.xml
+	python ras2raw_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis xrd_raw_template.xml raw.xml
 
 第3引数で指定したファイル名で装置出力パラメータが作成されます。
 
 装置出力パラメータから主要パラメータを抽出します::
 
-	python raw2primary_XRD.py ../source/XRD_RIGAKU.ras --encoding sjis ../source/xrd_raw_template.xml primary.xml
+	python raw2primary_XRD.py raw.xml xrd_primary_template.xml primary.xml
 
 第3引数で指定したファイルで主要パラメータが作成されます。
 
@@ -52,15 +52,15 @@ rasファイルから装置出力パラメータを抽出します::
 
 	コマンドを一つずつ実行するのではなく、まとめて可視化、
 	メタ情報抽出を行うようにバッチ処理を行いたい場合は、
-	Rigaku_XRD_tools(batch) で、:
+	Rigaku_XRD_tools で、
 
-	execute_XRD.py
+	batch_exe_XRD.py
 
 	を利用して処理を行います。
 
-	execute_XRD.py は、上記のコマンドをまとめて行うプログラムです。:
+	batch_exe_XRD.py は、上記のコマンドをまとめて行うプログラムです。
 
-	python execute_XRD.py ../source/XRD_RIGAKU.ras
+	python batch_exe_XRD.py ../source/XRD_RIGAKU.ras
 
 	を実行すると、../XRD_RIGAKUというフォルダを作成し、その中にFND(Formatted Numerical Data)、
  	スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
@@ -68,7 +68,7 @@ rasファイルから装置出力パラメータを抽出します::
 
 	jupyter notebook 上で画像やパラメータの確認を行いながら実行するには execute_jupyter.py を使用してください。:
 
-	python execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
+	%run -i batch_exe_XRD_jupyter.py ../source/XRD_RIGAKU.ras
 
 
 For more information, refer to the `the documentation`__.
