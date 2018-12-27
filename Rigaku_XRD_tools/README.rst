@@ -58,7 +58,7 @@ execute_XRD.py は、上記のコマンドをまとめて行うプログラム�
 スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
 連続変換を行いたい場合などに使用します。
 
-jupyter notebook 上で画像やパラメータの確認を行いながら実行するには execute_XRD_jupyter.py を使用してください。::
+jupyter notebook 上で画像やパラメータの確認を行いながら実行するには batch_exe_XRD_jupyter.py を使用してください。::
 
 	%run -i execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
 
