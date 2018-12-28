@@ -58,14 +58,15 @@ execute_XRD.py は、上記のコマンドをまとめて行うプログラム�
 スペクトルの図、装置出力パラメータ、主要パラメータファイルを出力します。
 連続変換を行いたい場合などに使用します。
 
-jupyter notebook 上でも実行できます。画像やパラメータの確認を行いながら実行するには batch_exe_XRD_jupyter.py を使用してください。jupyter notebook での使い方はこちらの`チュートリアル <https://github.com/nims-dpfc/MDAC_XRD/blob/master/docs_src/readme_for_jupyter.rst>`_をご覧ください。::
+Jupyter Notebook での利用
+------------------------
 
-	%run -i execute_XRD_jupyter.py ../source/XRD_RIGAKU.ras
-
+jupyter notebook 上でも実行できます。jupyter notebook での使い方はこちらの `チュートリアル`_ をご覧ください。::
 
 For more information, refer to the `the documentation`__.
 
 .. __: https://nims-dpfc.github.io/Materials_Data_Repository/
+.. _チュートリアル: http://jupyter.org/https://github.com/nims-dpfc/MDAC_XRD/blob/master/docs_src/readme_for_jupyter.rst
 
 Instrallation
 -------------
