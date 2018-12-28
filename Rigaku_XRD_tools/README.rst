@@ -1,5 +1,5 @@
-XRD
-====
+XRD Tools for Rigaku
+====================
 
 フォルダに含まれるファイルの説明
 --------------------------------
@@ -68,12 +68,3 @@ For more information, refer to the `the documentation`__.
 .. __: https://nims-dpfc.github.io/Materials_Data_Repository/
 .. _チュートリアル: ../docs_src/readme_for_jupyter.rst
 
-Instrallation
--------------
-
-ここにインストールの手順が入ります。
-
-Documentation
--------------
-
-ここにドキュメントがはいります。
