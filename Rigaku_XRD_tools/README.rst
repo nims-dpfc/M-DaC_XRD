@@ -66,7 +66,7 @@ jupyter notebook 上でも実行できます。jupyter notebook での使い方�
 For more information, refer to the `the documentation`__.
 
 .. __: https://nims-dpfc.github.io/Materials_Data_Repository/
-.. _チュートリアル: http://jupyter.org/https://github.com/nims-dpfc/MDAC_XRD/blob/master/docs_src/readme_for_jupyter.rst
+.. _チュートリアル: docs_src/readme_for_jupyter.rst
 
 Instrallation
 -------------
