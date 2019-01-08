@@ -43,11 +43,11 @@
 
 日本語引用文例）　
 
-長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 (https://github.com/nims-dpfc/M-DaC_XPS/   or   https://github.com/nims-dpfc/M-DaC_XRD)
+長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS/   or   https://github.com/nims-dpfc/M-DaC_XRD)
+H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 
 

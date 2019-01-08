@@ -29,12 +29,12 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 
 
-##### Terms of Use and Lisence
+##### Terms of Use and License
 
 * Data and articles within the Program with “CC-BY-SA” in the License field may be used under the Creative Commons Attribution-ShareAlike 4.0 International license.
 * Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE.txt. 
 * Trial programs by ULVAC-PHI, Inc. may be used within the scope of their license agreement, indicated separately.
-* In more detail, please read the following license agreement; "Terms of Use and Lisence.md"
+* In more detail, please read the following license agreement; "Terms of Use and License.md"
 
 
 
@@ -44,7 +44,7 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 Ex)
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS/   or   https://github.com/nims-dpfc/M-DaC_XRD)
+H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 
 
