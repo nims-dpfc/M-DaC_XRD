@@ -8,53 +8,46 @@
 
 ##### 対象装置およびメーカ　（2019年１月３０日現在）
 
-　X線光電子分光/ X-ray Photoelectron Spectroscopy（XPS）　（アルバック・ファイ株式会社）
-
-　X線回折/ X-ray Diffraction (XRD)   （株式会社リガク）
+* X線光電子分光/ X-ray Photoelectron Spectroscopy（XPS）　（アルバック・ファイ株式会社）
+* X線回折/ X-ray Diffraction (XRD)   （株式会社リガク）
 
 
 
 ##### 動作環境
 
-　python 3.X
-
-　Jupyter Notebook (http://jupyter.org/)
+* python 3.X
+* Jupyter Notebook (http://jupyter.org/)
 
 
 
 ##### 操作方法
 
-・作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。
-
-　http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-・各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
+* 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
+ http:// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+* 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
 
 
 ##### 利用ルールおよびライセンス
 
-・本プログラム等のうち、サンプルデータおよび記事コンテンツについては、「*クリエイティブ・コモンズ・ライセンスの表示4.0国際*」のもとで「*CC-BY-SA*」での利用ができます。
-
-・本プログラム等のうち、ライセンス欄に「MITライセンス」の表記のある試験用ソースコードは別に示される『LICENSE_MIT.txt』に示されるMITライセンスのもと利用できます。
-
-・アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
-
-・詳細は『Terms of Use and Lisence.md』をお読みください。
+* 本プログラム等のうち、サンプルデータおよび記事コンテンツについては、「*クリエイティブ・コモンズ・ライセンスの表示4.0国際*」のもとで「*CC-BY-SA*」での利用ができます。
+* 本プログラム等のうち、ライセンス欄に「MITライセンス」の表記のある試験用ソースコードは別に示される『LICENSE_MIT.txt』に示されるMITライセンスのもと利用できます。
+* アルバック・ファイ株式会社による試験用プログラム（MPExport.exe）は、別に示される『使用許諾書』の範囲において使用できます。
+* 詳細は『Terms of Use and License.md』をお読みください。
 
 
 
 ##### 論文などにおける引用の表記
 
-・M-DaCを使った研究や開発においての引用例を参照してください。
+* M-DaCを使った研究や開発においての引用例を参照してください。
 
 日本語引用文例）　
 
-長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 （https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD）
+長尾浩子, 鈴木峰晴, 吉川英樹：”NIMS Materials Data Conversion Tools (M-DaC)”, 2018 (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, （https://github.com/nims-dpfc/MDAC_XPS/   or   https://github.com/nims-dpfc/MDAC_XRD）
+H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 
 
