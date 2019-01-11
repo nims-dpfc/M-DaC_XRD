@@ -16,7 +16,7 @@ import io
 import os.path
 
 parser = argparse.ArgumentParser()
-parser.add_argument("file_path")
+parser.add_argument("file_path", help="input file")
 parser.add_argument("--encoding", default="utf_8")
 options = parser.parse_args()
 readfile = options.file_path
