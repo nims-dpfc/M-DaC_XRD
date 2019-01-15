@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import ScalarFormatter
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import plotly.graph_objs as go
+from dateutil.parser import parse
 import xml.dom.minidom
 import re
 import xml.etree.ElementTree as ET
@@ -49,6 +50,138 @@ def plotlygraph(xrevFlag, yrevFlag, title, data, fig):
 
     fig = dict(data=data, layout=layout)
     iplot(fig, show_link=False, filename=title, validate=False, config={"displaylogo":False, "modeBarButtonsToRemove":["sendDataToCloud"]})
+
+def registdf(key, channel, value, metadata, unitlist, template):
+    key_unit = 0
+    column = key
+
+    tempflag = 1
+    if not column in columns:
+        tempflag = 0
+    if tempflag == 1:
+        org_column = column
+#        if value != None:
+        if 1:
+            unitcolumn = template.find('meta[@key="{value}"][@unit]'.format(value=key))
+            transition = 0
+            if unitcolumn != None:
+                if key == "Detector_Pixel_Size":
+                    value_unit = unitcolumn.get("unit")
+                elif key == "K_alpha_1_Wavelength":
+                    value_unit = rawdata.find('meta[@key="HW_XG_WAVE_LENGTH_UNIT"]').text
+                elif key == "K_alpha_2_Wavelength":
+                    value_unit = rawdata.find('meta[@key="HW_XG_WAVE_LENGTH_UNIT"]').text
+                elif key == "K_beta_Wavelength":
+                    value_unit = rawdata.find('meta[@key="HW_XG_WAVE_LENGTH_UNIT"]').text
+                elif key == "X-ray_Tube_Current":
+                    value_unit = rawdata.find('meta[@key="HW_XG_CURRENT_UNIT"]').text
+                elif key == "X-ray_Tube_Voltage":
+                    value_unit = rawdata.find('meta[@key="HW_XG_VOLTAGE_UNIT"]').text
+                elif key == "Scan_Speed":
+                    value_unit = rawdata.find('meta[@key="MEAS_SCAN_SPEED_UNIT"]').text
+                elif key == "Scan_Starting_Position":
+                    value_unit = rawdata.find('meta[@key="MEAS_SCAN_UNIT_X"]').text
+                elif key == "Scan_Step_Size":
+                    value_unit = rawdata.find('meta[@key="MEAS_SCAN_UNIT_X"]').text
+                elif key == "Scan_Ending_Position":
+                    value_unit = rawdata.find('meta[@key="MEAS_SCAN_UNIT_X"]').text
+            else:
+                value_unit=""
+                if key == "Year":
+                    dt = parse(value)
+                    value = dt.year
+                elif key == "Month":
+                    dt = parse(value)
+                    value = "{0:02d}".format(dt.month)
+                elif key == "Day":
+                    dt = parse(value)
+                    value = "{0:02d}".format(dt.day)
+                elif key == "Wavelength_Type":
+                    wavetype = value
+                    if wavetype.find('a'):
+                        wavetype = wavetype.replace('a', '_alpha')
+                    if wavetype.find('b'):
+                        wavetype = wavetype.replace('b', '_beta')
+                    value = wavetype
+                elif key == "Scan_Axis":
+                    xlabelname = value
+                    theta_list = ['TwoThetaTheta', '2θ/θ']
+                    if xlabelname in theta_list:
+                        xlabelname = '2Theta-Theta'
+                    value = xlabelname
+            if value == None:
+                value =""
+
+            subnode = dom.createElement('meta')
+            subnode.appendChild(dom.createTextNode(str(value)))
+            subnode_attr = dom.createAttribute('key')
+            subnode_attr.value = column
+            subnode.setAttributeNode(subnode_attr)
+            metadata.appendChild(subnode)
+
+            if value_unit != None and len(value_unit) > 0:
+                subnode_attr = dom.createAttribute('unit')
+                subnode_attr.value = value_unit
+                subnode.setAttributeNode(subnode_attr)
+                metadata.appendChild(subnode)
+                unitlist.append(key)
+                
+            subnode_attr = dom.createAttribute('type')
+            typename = template.find('meta[@key="{value}"]'.format(value=key))
+            if typename.get("type") != None:
+                subnode_attr.value = typename.get("type")
+            else:
+                subnode_attr.value = "String"
+            subnode.setAttributeNode(subnode_attr)
+            metadata.appendChild(subnode)
+
+            if channel != 0:
+                subnode_attr = dom.createAttribute('column')
+                subnode_attr.value = channel
+                subnode.setAttributeNode(subnode_attr)
+                metadata.appendChild(subnode)
+
+            if transition == 1:
+                subnode = dom.createElement('meta')
+                subnode.appendChild(dom.createTextNode(str(value2)))
+                subnode_attr = dom.createAttribute('key')
+                subnode_attr.value = "Transitions"
+                subnode.setAttributeNode(subnode_attr)
+                metadata.appendChild(subnode)
+
+                subnode_attr = dom.createAttribute('type')
+                typename = template.find('meta[@key="Transitions"]')
+                if typename.get("type") != None:
+                    subnode_attr.value = typename.get("type")
+                else:
+                    subnode_attr.value = "String"
+                subnode.setAttributeNode(subnode_attr)
+                metadata.appendChild(subnode)
+
+                if channel != 0:
+                    subnode_attr = dom.createAttribute('column')
+                    subnode_attr.value = channel
+                    subnode.setAttributeNode(subnode_attr)
+                    metadata.appendChild(subnode)
+
+                transition = 0
+
+        return metadata
+
+def regist(column, key, rawdata, metadata, channel, value, unitlist, template):
+    if column in rawcolumns:
+        registdf(key, channel, value, metadata, unitlist, template)
+    return metadata
+
+
+def conv(column, temp_name, rawdata, metadata, channel, unitlist, template):
+    if channel == 0:
+        metadata = regist(column, temp_name, rawdata, metadata, 0, rawdata.find('meta[@key="{value}"]'.format(value=column)).text, unitlist, template)
+    else:
+        for node in rawdata.findall('meta[@key="{value}"]'.format(value=column)):
+            columnnum = node.attrib.get('column')
+            metadata = regist(column, temp_name, rawdata, metadata, columnnum, node.text, unitlist, template)
+    return(metadata)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("file_path")
@@ -260,7 +393,7 @@ if jupytermode == True:
 
 subprocess.run(["python", "../" + tooldir + "ras2raw_XRD.py", basename, "--encoding", "sjis", "../" + tooldir + "xrd_raw_template.xml", "raw.xml"])
 
-#------- raw2primary_XPS_survey.py begin ---------
+#------- raw2primary_XRD.py begin ---------
 #subprocess.run(["python", "../" + tooldir + "raw2primary_XRD.py", "raw.xml", "../" + tooldir + "xrd_primary_template.xml", "primary.xml"])
 
 readfile3 = "raw.xml"
@@ -336,7 +469,7 @@ file = codecs.open(outputfile,'wb',encoding='utf-8')
 dom.writexml(file,'','\t','\n',encoding='utf-8')
 file.close()
 dom.unlink()
-#------- raw2primary_XPS_survey.py begin ---------
+#------- raw2primary_XRD.py end ---------
 
 os.remove(basename)
 os.chdir("../")
