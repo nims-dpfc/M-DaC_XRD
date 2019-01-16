@@ -5,7 +5,7 @@
 今回開発した M-DaC を研究者等に広く使用または利用いただき、関連の技術開発をさらに推し進めることができるよう、試験用プログラム、試験用ソースコード及びサンプルデータ等（以下まとめて「本プログラム等」という）を無償で公開します。
 
 ##### Tutorial
-     <https://nims-dpfc.github.io/M-DaC_XPS/xrd.html>
+     https://nims-dpfc.github.io/M-DaC_XPS/xrd.html
 
 ##### 対象装置およびメーカ　（2019年１月３０日現在）
 
@@ -24,7 +24,7 @@
 ##### 操作方法
 
 * 作業ディレクトリに一式をダウンロードしてから、以下のチュートリアルのサンプルデータで一連のフローを試してください。<br />
- <https://nims-dpfc.github.io/M-DaC_XPS/xrd.html>
+ https://nims-dpfc.github.io/M-DaC_XPS/xrd.html
 * 各メーカーのお手持ちのデータがあれば、同様に処理を進めることができます。
 
 
@@ -40,7 +40,7 @@
 
 ##### 論文などにおける引用の表記
 
-* M-DaCを使った研究や開発においての引用例を参照してください。
+* M-DaCを使った研究や開発では、下記の引用例を参照してください。
 
 日本語引用文例）　
 
@@ -48,7 +48,7 @@
 
 英語引用文例）
 
-H. Nagao, M. Suzuki, H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
+H. Nagao, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC)", 2018, (https://github.com/nims-dpfc/M-DaC_XPS   or   https://github.com/nims-dpfc/M-DaC_XRD)
 
 
 
