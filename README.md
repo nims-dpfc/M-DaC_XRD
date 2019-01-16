@@ -10,8 +10,8 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ##### Instruments (As of Jan. 30, 2019) 
 
-* X-ray Photoelectron Spectroscopy(XPS) (ULVAC-PHI, Inc. )
-* X-ray Diffraction (XRD)   (Rigaku Corporation)
+* X-ray Photoelectron Spectroscopy (XPS)(ULVAC-PHI, Inc. )
+* X-ray Diffraction (XRD)(Rigaku Corporation)
 
 
 
