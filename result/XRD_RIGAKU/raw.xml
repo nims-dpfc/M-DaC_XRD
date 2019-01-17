@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
 	<meta key="DISP_LINE_COLOR" type="String">4294901760</meta>
-	<meta key="FILE_COMMENT" type="String"></meta>
+	<meta key="FILE_COMMENT" type="String">XRD example</meta>
 	<meta key="FILE_MD5" type="String"></meta>
-	<meta key="FILE_MEMO" type="String"></meta>
+	<meta key="FILE_MEMO" type="String">Rigaku XRD memo</meta>
 	<meta key="FILE_OPERATOR" type="String">English</meta>
 	<meta key="FILE_PACKAGE_NAME" type="String"></meta>
 	<meta key="FILE_PART_ID" type="String">GeneralMeasurement(BB)</meta>
-	<meta key="FILE_SAMPLE" type="String"></meta>
+	<meta key="FILE_SAMPLE" type="String">Test Sample</meta>
 	<meta key="FILE_TYPE" type="String">RAS_RAW</meta>
 	<meta key="FILE_USERGROUP" type="String">Academic</meta>
 	<meta key="FILE_VERSION" type="String">1</meta>

@@ -4,10 +4,10 @@
 	<meta key="Year" type="Numeric">2017</meta>
 	<meta key="Month" type="Numeric">11</meta>
 	<meta key="Day" type="Numeric">21</meta>
-	<meta key="Comment" type="String"></meta>
-	<meta key="Memo" type="String"></meta>
+	<meta key="Comment" type="String">XRD example</meta>
+	<meta key="Memo" type="String">Rigaku XRD memo</meta>
 	<meta key="Operator" type="String">English</meta>
-	<meta key="Specimen" type="String"></meta>
+	<meta key="Specimen" type="String">Test Sample</meta>
 	<meta key="Detector_Pixel_Size" type="Quantity" unit="mm">0.075</meta>
 	<meta key="Selected_Detector_Name" type="String">DteX250(H)</meta>
 	<meta key="X-ray_Target_Material" type="String">Cu</meta>
