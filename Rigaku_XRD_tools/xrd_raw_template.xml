@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template>
+<template version="1.0.0" package="M-DaC_XRD/Rigaku_XRD_tools">
   <column_name>condition</column_name>
   <meta key="DISP_LINE_COLOR" type="String"/>
   <meta key="FILE_COMMENT" type="String"/>

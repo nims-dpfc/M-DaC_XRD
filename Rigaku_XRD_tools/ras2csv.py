@@ -7,8 +7,9 @@
 #-------------------------------------------------
 # coding: utf-8
 
-from __future__ import print_function
-from __future__ import unicode_literals
+__package__ = "M-DaC_XRD/Rigaku_XRD_tools"
+__version__ = "1.0.0"
+
 import argparse
 import csv
 import itertools
@@ -68,6 +69,13 @@ with open(readfile, 'r', encoding=encoding_option) as f:
                     header.append(meta)
                     meta = ['##acq_date', acqdate]
                     header.append(meta)
+                    meta = ['##tool_package', __package__]
+                    header.append(meta)
+                    meta = ['##tool_filename', os.path.basename(__file__)]
+                    header.append(meta)
+                    meta = ['##tool_version', __version__]
+                    header.append(meta)
+
                     if filememo != "":
                         meta = ['##comment', filememo]
                         header.append(meta)

@@ -31,4 +31,10 @@
 	<meta key="Intensity_Unit" type="String">counts</meta>
 	<column_num>1</column_num>
 	<column_name>condition</column_name>
+	<tool_package>M-DaC_XRD/Rigaku_XRD_tools</tool_package>
+	<tool_filename>batch_exe_XRD.py</tool_filename>
+	<tool_version>1.0.0</tool_version>
+	<template_package>M-DaC_XRD/Rigaku_XRD_tools</template_package>
+	<template_filename>xrd_primary_template.xml</template_filename>
+	<template_version>1.0.0</template_version>
 </metadata>
