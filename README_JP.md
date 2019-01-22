@@ -6,7 +6,9 @@
 
 ### チュートリアル
 
-  <https://nims-dpfc.github.io/M-DaC_XPS/xrd.html>
+ *M-DaC チュートリアル:* https://nims-dpfc.github.io/M-DaC_doc
+ 
+ *M-DaC for XRD:*  https://nims-dpfc.github.io/M-DaC_doc/xrd.html
 
 ### 対象装置およびメーカ　（2019年１月３０日現在）
 
