@@ -8,7 +8,7 @@
 
   <https://nims-dpfc.github.io/M-DaC_XPS/xrd.html>
 
-### 対象装置およびメーカ　（2019年１月３０日現在）
+### 対象装置およびメーカ　（2019年1月30日現在）
 
 * X線光電子分光/ X-ray Photoelectron Spectroscopy（XPS）（アルバック・ファイ株式会社）
 * X線回折/ X-ray Diffraction (XRD)（株式会社リガク）
