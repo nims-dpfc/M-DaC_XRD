@@ -6,29 +6,28 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ### Tutorial
 
- *M-DaC Tutorial:* https://nims-dpfc.github.io/M-DaC_doc
- 
- *M-DaC for XRD:*  https://nims-dpfc.github.io/M-DaC_doc/xrd.html
+　　https://nims-dpfc.github.io/M-DaC_doc/
 
 ### Instruments (As of April 10, 2020) 
 
-X-ray Photoelectron Spectroscopy (XPS)(ULVAC-PHI, Inc.)
-
-X-ray Diffraction (XRD)(Rigaku Corporation)
-
-Auger Electron Spectroscopy (AES)(JEOL Ltd. and ULVAC-PHI, Inc.)
-
+| measurement method | abb. | maker |
+| --- | --- | --- |
+| X-ray Photoelectron Spectroscopy | XPS | ULVAC-PHI, Inc. |
+| X-ray Diffraction | XRD | Rigaku Corporation |
+| Auger Electron Spectroscopy | AES | JEOL Ltd. and ULVAC-PHI, Inc. |
 
 ### Environment
 
-* python 3.X
-* Jupyter Notebook (http://jupyter.org/)
+ * python 3.X
+
+ * Jupyter Notebook (http://jupyter.org/)
+
 
 
 ### Method
 
 * After downloading the set to the working directory, please try a series of flows with sample data of the following tutorial.<br />
- https://nims-dpfc.github.io/M-DaC_doc/xrd.html   
+ https://nims-dpfc.github.io/M-DaC_doc/
 
 * If you have data on hand of each manufacturer, you can proceed in the same way.
 
@@ -36,10 +35,13 @@ Auger Electron Spectroscopy (AES)(JEOL Ltd. and ULVAC-PHI, Inc.)
 
 ### Terms of Use and License
 
-* Data and articles within the Program with “CC-BY-NC” in the License field may be used under the Creative Commons Attribution-NonCommercial 4.0 International license.
-* Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE_MIT.txt. 
-* In more detail, please read the following license agreement; "Terms of Use and License.md"
+* Data and articles within the Program with “CC-BY-SA” in the License field may be used under the Creative Commons Attribution-ShareAlike 4.0 International license.
 
+* Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE_MIT.txt. 
+
+* Trial programs by ULVAC-PHI, Inc. may be used within the scope of their license agreement, indicated separately.
+
+* In more detail, please read the following license agreement; "Terms of Use and License.md"
 
 
 
@@ -47,9 +49,7 @@ Auger Electron Spectroscopy (AES)(JEOL Ltd. and ULVAC-PHI, Inc.)
 
 * Please refer to the cited example of the research and development using the M-DaC
 
-Ex)
-
-H. Nagao, S. Matsunami, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC) ver 1.1"
+Ex)  H. Nagao, S. Matsunami, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conversion Tools (M-DaC) ver 1.1"
 
 
 
@@ -61,7 +61,7 @@ National Institutes for Materials Science
 
   Research and Services Division of Materials Data and Integrated System (MaDIS), Materials Data Platform Center
 
-  Materials Data Analysis Group (M-DaC in charge) E-mail: m-dac@ml.nims.go.jp
+  Materials Data Service Team (M-DaC in charge) E-mail: m-dac@ml.nims.go.jp
 
 
 2019.1.30 1st Ed.  
