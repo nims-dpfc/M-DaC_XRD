@@ -10,11 +10,13 @@ We hereby release the trial program, trial source code, and source data, etc. (h
  
  *M-DaC for XRD:*  https://nims-dpfc.github.io/M-DaC_doc/xrd.html
 
-### Instruments (As of April. 10, 2020) 
+### Instruments (As of April 10, 2020) 
 
-* X-ray Photoelectron Spectroscopy (XPS)(ULVAC-PHI, Inc. )
-* X-ray Diffraction (XRD)(Rigaku Corporation)
-* Auger Electron Spectroscopy (AES)(JEOL Ltd.)
+X-ray Photoelectron Spectroscopy (XPS)(ULVAC-PHI, Inc.)
+
+X-ray Diffraction (XRD)(Rigaku Corporation)
+
+Auger Electron Spectroscopy (AES)(JEOL Ltd. and ULVAC-PHI, Inc.)
 
 
 ### Environment
