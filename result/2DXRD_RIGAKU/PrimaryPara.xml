@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<meta key="Year" type="Numeric">2016</meta>
+	<meta key="Month" type="Numeric">03</meta>
+	<meta key="Day" type="Numeric">15</meta>
+	<meta key="HEADER_BYTES" type="Numeric">4096</meta>
+	<meta key="BYTE_ORDER" type="String">little_endian</meta>
+	<meta key="SIZE1" type="Numeric">775</meta>
+	<meta key="SIZE2" type="Numeric">385</meta>
+	<meta key="Data_type" type="String">unsigned long int</meta>
+	<meta key="FILENAME" type="String">Al_chi35_111_200_0001.img</meta>
+	<meta key="DTDISPLAY_ORIENTATION" type="String">+X+Y</meta>
+	<meta key="SOURCE_WAVELENGTH" type="Quantity" unit="Angstrom">1.5418</meta>
+	<meta key="SOURCE_AMPERAGE" type="Quantity" unit="mA">50.0</meta>
+	<meta key="SOURCE_VOLTAGE" type="Quantity" unit="kV">50.0</meta>
+	<meta key="SOURCE_FOCUS" type="Quantity" unit="mm">0.10000</meta>
+	<meta key="CRYSTAL_GONIO_NUM_VALUES" type="Numeric">3</meta>
+	<meta key="CRYSTAL_GONIO_NAME1" type="String">Omega</meta>
+	<meta key="CRYSTAL_GONIO_VECTOR1" type="String">(0 1 0)</meta>
+	<meta key="CRYSTAL_GONIO_VALUE1" type="Quantity" unit="deg">20.0000</meta>
+	<meta key="CRYSTAL_GONIO_NAME2" type="String">Chi</meta>
+	<meta key="CRYSTAL_GONIO_VECTOR2" type="String">(0 0 -1)</meta>
+	<meta key="CRYSTAL_GONIO_VALUE2" type="Quantity" unit="deg">35.000</meta>
+	<meta key="CRYSTAL_GONIO_NAME3" type="String">Phi</meta>
+	<meta key="CRYSTAL_GONIO_VECTOR3" type="String">(1 0 0)</meta>
+	<meta key="CRYSTAL_GONIO_VALUE3" type="Quantity" unit="deg">0.000</meta>
+	<meta key="DETECTOR_NAMES" type="String">PXD_</meta>
+	<meta key="PXD_DETECTOR_DIMENSION_X" type="Numeric">775</meta>
+	<meta key="PXD_DETECTOR_DIMENSION_Y" type="Numeric">385</meta>
+	<meta key="PXD_DETECTOR_SIZE_X" type="Quantity" unit="mm">77.5</meta>
+	<meta key="PXD_DETECTOR_VECTOR_X" type="String">(1 0 0)</meta>
+	<meta key="PXD_DETECTOR_SIZE_Y" type="Quantity" unit="mm">38.5</meta>
+	<meta key="PXD_DETECTOR_VECTOR_Y" type="String">(0 1 0)</meta>
+	<meta key="DARK_PEDESTAL" type="Numeric">0</meta>
+	<meta key="PXD_SPATIAL_BEAM_POSITION_X" type="Numeric">389.656</meta>
+	<meta key="PXD_SPATIAL_BEAM_POSITION_Y" type="Numeric">185.769</meta>
+	<meta key="PXD_GONIO_NUM_VALUES" type="Numeric">6</meta>
+	<meta key="PXD_GONIO_VALUE2" type="Quantity" unit="deg">40.0000</meta>
+	<meta key="PXD_GONIO_VECTOR2" type="String">(0 1 0)</meta>
+	<meta key="PXD_GONIO_VALUE6" type="Quantity" unit="mm">99.4739667062</meta>
+	<meta key="PXD_GONIO_VECTOR6" type="String">(0 0 -1)</meta>
+	<meta key="X_STAGE_VALUE" type="Quantity" unit="mm">0.0000</meta>
+	<meta key="X_STAGE_VECTOR" type="String">(0 0 1)</meta>
+	<meta key="Y_STAGE_VALUE" type="Quantity" unit="mm">0.0000</meta>
+	<meta key="Y_STAGE_VECTOR" type="String">(0 1 0)</meta>
+	<meta key="PIXEL_SIZE_X" type="Quantity" unit="mm">0.1</meta>
+	<meta key="PIXEL_SIZE_Y" type="Quantity" unit="mm">0.1</meta>
+	<column_num>1</column_num>
+	<column_name>condition</column_name>
+</metadata>

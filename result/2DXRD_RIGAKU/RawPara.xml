@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<meta key="HEADER_BYTES" type="String">4096</meta>
+	<meta key="DIM" type="String">2</meta>
+	<meta key="BYTE_ORDER" type="String">little_endian</meta>
+	<meta key="SIZE1" type="String">775</meta>
+	<meta key="SIZE2" type="String">385</meta>
+	<meta key="Data_type" type="String">unsigned long int</meta>
+	<meta key="COMPRESSION" type="String">None</meta>
+	<meta key="SATURATED_VALUE" type="String">900000</meta>
+	<meta key="TYPE" type="String">mad</meta>
+	<meta key="FILENAME" type="String">Al_chi35_111_200_0001.img</meta>
+	<meta key="COMMENT" type="String"></meta>
+	<meta key="DTDISPLAY_ORIENTATION" type="String">+X+Y</meta>
+	<meta key="SOURCE_VECTORS" type="String">0.000 0.000 1.000 0.000 1.000 0.000 1.000 0.000 0.000</meta>
+	<meta key="SOURCE_POLARZ" type="String">0.0000 0.0000 0.0000 0.0000</meta>
+	<meta key="SOURCE_CROSSFIRE" type="String">0.0002 0.0002 0.0000 0.0000</meta>
+	<meta key="SOURCE_WAVELENGTH" type="String">1.00000 1.5418</meta>
+	<meta key="SOURCE_AMPERAGE" type="String">50.0 mA</meta>
+	<meta key="SOURCE_VOLTAGE" type="String">50.0 kV</meta>
+	<meta key="SOURCE_FOCUS" type="String">0.10000</meta>
+	<meta key="SOURCE_SPECTRAL_DISPERSION" type="String">0.00020 0.00020</meta>
+	<meta key="SOURCE_SIZE" type="String">0.0000 0.0000 0.0000 0.0000</meta>
+	<meta key="SOURCE_REFINE_FLAGS" type="String">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</meta>
+	<meta key="SOURCE_VALUES" type="String">0.0000 0.0000</meta>
+	<meta key="CRYSTAL_GONIO_NUM_VALUES" type="String">3</meta>
+	<meta key="CRYSTAL_GONIO_NAMES" type="String">Omega Chi Phi</meta>
+	<meta key="CRYSTAL_GONIO_VECTORS" type="String">0.0000 1.0000 0.0000 0.0000 0.0000 -1.0000 1.0000 0.0000 0.0000</meta>
+	<meta key="CRYSTAL_GONIO_UNITS" type="String">deg deg deg</meta>
+	<meta key="CRYSTAL_GONIO_VALUES" type="String">20.0000 35.000 0.000</meta>
+	<meta key="CRYSTAL_GONIO_DESCRIPTION" type="String">SmartLab</meta>
+	<meta key="CRYSTAL_TEMPERATURE_SAMPLE" type="String"></meta>
+	<meta key="CRYSTAL_HUMIDITY_SAMPLE" type="String"></meta>
+	<meta key="DETECTOR_NUMBER" type="String">1</meta>
+	<meta key="DETECTOR_NAMES" type="String">PXD_</meta>
+	<meta key="PXD_DETECTOR_DIMENSIONS" type="String">775 385</meta>
+	<meta key="PXD_DETECTOR_SIZE" type="String">77.5 38.5</meta>
+	<meta key="PXD_DETECTOR_VECTORS" type="String">1 0 0 0 1 0</meta>
+	<meta key="PXD_NONUNF_TYPE" type="String">None</meta>
+	<meta key="PXD_NONUNF_INFO" type="String">None</meta>
+	<meta key="PXD_SPATIAL_DISTORTION_TYPE" type="String">Simple_spatial</meta>
+	<meta key="PXD_SPATIAL_DISTORTION_INFO" type="String">389.656 185.769 0.1 0.1</meta>
+	<meta key="PXD_SPATIAL_DISTORTION_VECTORS" type="String">0 -1 1 0</meta>
+	<meta key="PXD_DETECTOR_IDENTIFICATION" type="String">42537f0f00000052</meta>
+	<meta key="PXD_TAPER_ORIENTATION" type="String">+X+Y</meta>
+	<meta key="PXD_UNBINNED_BEAM_POSITION" type="String">389.656 185.769</meta>
+	<meta key="PXD_UNBINNED_DIMENSIONS" type="String">775 385</meta>
+	<meta key="DARK_PEDESTAL" type="String">0</meta>
+	<meta key="PXD_SPATIAL_BEAM_POSITION" type="String">389.656 185.769</meta>
+	<meta key="PXD_GONIO_NUM_VALUES" type="String">6</meta>
+	<meta key="PXD_GONIO_NAMES" type="String">RotZAboutBeam 2Theta RotX XShift YShift Distance</meta>
+	<meta key="PXD_GONIO_VECTORS" type="String">0.0000 0.0000 1.0000 0.0000 1.0000 0.0000 1.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 -1.0000</meta>
+	<meta key="PXD_GONIO_VALUES" type="String">0.0000 40.0000 0.0000 0 0 99.4739667062</meta>
+	<meta key="PXD_GONIO_UNITS" type="String">deg deg deg mm mm mm</meta>
+	<meta key="PXD_GONIO_DESCRIPTION" type="String">SmartLab</meta>
+	<meta key="PXD_DETECTOR_IMAGE_DIRECTION" type="String">0</meta>
+	<meta key="ROTATION" type="String">0.0000 0.0000 0.0 20.00 0.000 0.000 0.000 0.000 0.000 0.000</meta>
+	<meta key="ROTATION_VECTOR" type="String"></meta>
+	<meta key="ROTATION_AXIS_NAME" type="String">Phi</meta>
+	<meta key="SCAN_SEQ_INFO" type="String">1 1 1</meta>
+	<meta key="SCAN_TEMPLATE" type="String"></meta>
+	<meta key="SCAN_TITLE" type="String"></meta>
+	<meta key="SCAN_ROTATION" type="String">0.0000 0.0000 0.0 20.00 0.000 0.000 0.000 0.000 0.000 0.000</meta>
+	<meta key="SCAN_ROTATION_AXIS_NAME" type="String">Phi</meta>
+	<meta key="SCAN_ROTATION_VECTOR" type="String"></meta>
+	<meta key="SCAN_DET_RELZERO" type="String"></meta>
+	<meta key="STRESS_PSI_ANGLES" type="String"></meta>
+	<meta key="STRESS_INCLINATION_TYPE" type="String"></meta>
+	<meta key="STRESS_PEAK_ANGLE" type="String"></meta>
+	<meta key="XY_STAGE_UNITS" type="String">mm mm</meta>
+	<meta key="XY_STAGE_VALUES" type="String">0.0000 0.0000</meta>
+	<meta key="XY_STAGE_VECTORS" type="String">0 0 1 0 1 0</meta>
+	<meta key="PXD_DETECTOR_DESCRIPTION" type="String">HyPix-3000</meta>
+	<meta key="PXD_DETECTOR_SERVERVERSION" type="String">5.1.0.17</meta>
+	<meta key="PXD_CREATE_DATETIME" type="String">2016/03/15 12:05:02.075</meta>
+	<meta key="PXD_DETECTOR_SYSTEM_TOTALMODULES" type="String">NoInfo</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_BIT_SHIFT" type="String">16 0</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_DATAMODE" type="String">Differential 16bit</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_EXPMODE" type="String">Fixed Time</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_EXPFRAME" type="String">1 2</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_EXPTIME" type="String">10000</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_EXPTRGDELAY" type="String">0</meta>
+	<meta key="PXD_DETECTOR_ACQUISITION_EXPINTERVAL" type="String">0</meta>
+	<meta key="PXD_DETECTOR_IMAGE_CORRECTION_NAMES" type="String">BadPix CntLoss InterChip FlatField MRedistr NoiseRemoval</meta>
+	<meta key="PXD_DETECTOR_IMAGE_CORRECTION_FLAGS" type="String">2 1 1 1 0 0</meta>
+	<meta key="PXD_DETECTOR_OPTIONS" type="String">Multiframe:off TriggerEnable:on Enableout:off HV_state:on Analog_state:on</meta>
+	<meta key="PXD_DETECTOR_REGION_OF_INTEREST" type="String">1 1 775 385</meta>
+	<meta key="PXD_DETECTOR_SYSTEM_TEMPERATURES" type="String">40 [deg C]</meta>
+	<meta key="PXD_DETECTOR_SYSTEM_HUMIDITY" type="String">NoInfo</meta>
+	<meta key="PXD_DETECTOR_SYSTEM_CORRECTIONTEMP" type="String">NoInfo</meta>
+	<meta key="PXD_DETECTOR_SYSTEM_ERRORSTATE" type="String"></meta>
+	<meta key="PXD_DETECTOR_SYSTEM_LOG_SETUP" type="String">Normal C:\ProgramData\Rigaku\HyPix\Log</meta>
+	<meta key="PXD_DETECTOR_SYSTEM_OWNER" type="String">User 60000 60001</meta>
+	<meta key="PXD_DETECTOR_SETUP_CONFIG_INFO" type="String">HyPix-3000</meta>
+	<meta key="PXD_DETECTOR_SETUP_ANALOG" type="String">14 0 0 18 12 18 3</meta>
+	<meta key="PXD_DETECTOR_SETUP_THRESHOLD" type="String">235 296 150</meta>
+	<meta key="PXD_DETECTOR_SETUP_RESOLUTION" type="String">99</meta>
+	<meta key="PXD_DETECTOR_SETUP_ENERGY" type="String">Cu 6keV 12keV</meta>
+	<column_num>1</column_num>
+	<column_name>condition</column_name>
+</metadata>
