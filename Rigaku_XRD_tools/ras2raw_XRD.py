@@ -6,6 +6,7 @@
 # This software is released under the MIT License.
 #-------------------------------------------------
 # coding: utf-8
+#__author__ = "nagao"
 
 __package__ = "M-DaC_XRD/Rigaku_XRD_tools"
 __version__ = "1.0.0"
