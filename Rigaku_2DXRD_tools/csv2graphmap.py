@@ -29,7 +29,7 @@ def getKey(key, row):
         return row[1]
     else:
         return 0
-    
+
 def scale_bar(anchor, pixel):
     baseWidth = anchor * pixel/3
     scaleValues = [1, 2, 3, 4, 5]
@@ -41,7 +41,7 @@ def scale_bar(anchor, pixel):
         if baseWidth > scaleWidth:
             j = j + 1
             oldWidth = scaleWidth
-            if j >= len(scaleValues): 
+            if j >= len(scaleValues):
                 j = 0
                 factor = factor * 10
         else:
@@ -213,7 +213,7 @@ if len(title) > length:
     string = title[:length] + '...'
 else:
     string = title
-    
+
 plt.title(string)
 ax.set_yticks([])
 ax.set_xticks([])

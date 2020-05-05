@@ -128,7 +128,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
                 unitlist.append(key)
-                
+
             subnode_attr = dom.createAttribute('type')
             typename = template.find('meta[@key="{value}"]'.format(value=key))
             if typename.get("type") != None:
@@ -336,7 +336,7 @@ if len(title) > length:
     string = title[:length] + '...'
 else:
     string = title
-    
+
 plt.title(string)
 plt.rcParams['font.family'] ='sans-serif'
 plt.rcParams['xtick.direction'] = 'in'

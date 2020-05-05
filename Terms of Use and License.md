@@ -7,25 +7,25 @@
 2. Data and articles within the Program with “CC-BY-NC” in the License field may be used under the Creative Commons Attribution-NonCommercial 4.0 International license.
 
 
-   2.2.Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE.txt. 
+   2.2.Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE.txt.
 
    2.3.NIMS is not responsible for any actions committed by users by means of the Program.
 
 3. The Program will be made publicly available via the NIMS official GitHub account (hereafter Public Website).
 
-4. The site uses Google Analytics to understand how the Public Website is being accessed. Google Analytics uses cookies to collect user information. By using this site, users consent to the use of cookies. User information collected by Google Analytics is managed according to Google’s Privacy Policy. For more information on the Google Analytics Terms of Use and Google’s Privacy Policy, please refer to the Google Analytics website. 
+4. The site uses Google Analytics to understand how the Public Website is being accessed. Google Analytics uses cookies to collect user information. By using this site, users consent to the use of cookies. User information collected by Google Analytics is managed according to Google’s Privacy Policy. For more information on the Google Analytics Terms of Use and Google’s Privacy Policy, please refer to the Google Analytics website.
 
- 
+
 
 　     　Google Analytics Terms of Use　https://www.google.com/analytics/terms/us.html
 
 　   　 Google’s Privacy Policy　https://policies.google.com/?hl=en
 
- 
+
 
 5. Your use of the Public Website constitutes your acceptance of these Terms.
 
- 
+
 
 National Institute for Materials Science (NIMS)
 

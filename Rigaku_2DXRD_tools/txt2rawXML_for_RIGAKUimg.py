@@ -1,15 +1,16 @@
 # -------------------------------------------------
-# txttorawXML_for_RIGAKUimg.py
+# txt2rawXML_for_RIGAKUimg.py
 #
 # Copyright (c) 2019, Data PlatForm Center, NIMS
 #
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-"""txttorawXML_for_RIGAKUimg.py
+
+"""txt2rawXML_for_RIGAKUimg.py
 
 This module extracts raw parameter from
-RIGAKU img text file.
+text data file by creating an RIGAKUimg file.
 
 Copyright (c) 2019, Data PlatForm Center, NIMS
 This software is released under the MIT License.
@@ -20,10 +21,10 @@ Example
     Parameters
     ----------
     inputfile : RIGAKU img text file
-    templatefile : template file for RIGAKU img raw Data
-    outputfile : output file
+    templatefile : template file for RIGAKU img raw parameter Data
+    outputfile : output file (XML)
 
-    $ python txttorawXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
+    $ python txt2rawXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
 
 """
 

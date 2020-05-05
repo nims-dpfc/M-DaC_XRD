@@ -64,5 +64,5 @@ H. Nagao, S. Matsunami, M. Suzuki, and H. Yoshikawa: "NIMS Materials Data Conver
 　 M-DaC代表窓口  E-mail: m-dac@ml.nims.go.jp
 
 
-2019.1.30 初版  
+2019.1.30 初版
 2020.4.15　改定

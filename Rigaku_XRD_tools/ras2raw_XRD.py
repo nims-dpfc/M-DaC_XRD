@@ -57,7 +57,7 @@ with open(readfile, 'r', encoding=encoding_option) as f:
             key = lines[0]
             tempvalue = lines[1]
             value = tempvalue[1:-1]
-            temp = template.find('meta[@key="{value}"]'.format(value=key))            
+            temp = template.find('meta[@key="{value}"]'.format(value=key))
             if temp != None:
                 df[key] = value
 

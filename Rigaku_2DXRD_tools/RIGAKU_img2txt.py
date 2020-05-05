@@ -6,6 +6,8 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
+#__author__ = "nagao"
+
 """RIGAKU_img2txt.py
 
 This module creates a formatted numerical data
@@ -21,6 +23,7 @@ Example
     ----------
     inputfile : RIGAKU img binary file
         Measurement data file measured by RIGAKU
+    outputfile : formatted numerical data (csv)
 
     $ python RIGAKU_img2txt.py [inputfile]
 

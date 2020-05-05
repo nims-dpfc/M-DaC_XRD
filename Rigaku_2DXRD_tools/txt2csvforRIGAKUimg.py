@@ -6,7 +6,9 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-"""txttocsvforRIGAKUimg.py
+#__author__ = "nagao"
+
+"""txt2csvforRIGAKUimg.py
 
 This module creates a formatted numerical data
 by creating a text version of the RIGAKU imgfile.
@@ -23,7 +25,7 @@ Example
         Measurement data file measured by RIGAKU
     outputfile : output csv file
 
-    $ python txttocsvforRIGAKUimg.py [inputfile] [outputfie]
+    $ python txt2csvforRIGAKUimg.py [inputfile]
 
 """
 import argparse

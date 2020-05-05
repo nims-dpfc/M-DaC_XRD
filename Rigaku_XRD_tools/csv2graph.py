@@ -178,7 +178,7 @@ if len(title) > length:
     string = title[:length] + '...'
 else:
     string = title
-    
+
 plt.title(string)
 
 plt.rcParams['font.family'] ='sans-serif'

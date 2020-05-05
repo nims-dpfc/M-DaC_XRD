@@ -1,15 +1,16 @@
 # -------------------------------------------------
-# rawtoprimaryXML_for_RIGAKUimg.py
+# raw2primaryXML_for_RIGAKUimg.py
 #
 # Copyright (c) 2019, Data PlatForm Center, NIMS
 #
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-"""rawtoprimaryXML_for_RIGAKUimg.py
+
+"""raw2primaryXML_for_RIGAKUimg.py
 
 This module extracts primary parameter from
-RIGAKU img raw file.
+RIGAKU img raw parameter file.
 
 Copyright (c) 2019, Data PlatForm Center, NIMS
 This software is released under the MIT License.
@@ -19,11 +20,11 @@ Example
 
     Parameters
     ----------
-    inputfile : RIGAKU img raw file
-    templatefile : template file for RIGAKU img primary Data
-    outputfile : output file
+    inputfile : RIGAKU img raw parameter file
+    templatefile : template file for RIGAKU img primary parameter Data
+    outputfile : output file (primary parameter file (XML))
 
-    $ python rawtoprimaryXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
+    $ python raw2primaryXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
 
 """
 import argparse
@@ -46,7 +47,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
             unitcolumn = template.find('meta[@key="{value}"][@unit]'.format(value=key))
             transition = 0
             if unitcolumn is not None:
-                value = arrayvalue[0] 
+                value = arrayvalue[0]
                 if key == "SOURCE_WAVELENGTH":
                     value_unit = unitcolumn.get("unit")
                     value = arrayvalue[1]
@@ -115,7 +116,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     size = rawdata.find('meta[@key="SIZE1"]').text
                     value = float(tempvalue[0]) / float(size)
                     value_unit = unitcolumn.get("unit")
-                    
+
                 elif key == "PIXEL_SIZE_Y":
                     temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
