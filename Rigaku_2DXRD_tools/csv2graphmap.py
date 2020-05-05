@@ -61,9 +61,11 @@ options = parser.parse_args()
 readfile = options.file_path
 scale_option = options.scale
 unit_option = options.unit
+#print(scale_option)
+#print(brightness_scale)
+#readfile = 'HAADF.csv'
 name, ext = os.path.splitext(readfile)
 axis = []
-
 with open(readfile, 'r') as f:
     reader = csv.reader(f)
     line = 1
@@ -144,7 +146,6 @@ with open(readfile, 'r') as f:
 #                legends = row[:]
         else:
             break
-
 df = pd.read_csv(readfile, header=None, delimiter=',',skiprows=line)
 df = df.dropna(axis=0, how='all')
 df = df.dropna(axis=1)
@@ -217,7 +218,7 @@ else:
 plt.title(string)
 ax.set_yticks([])
 ax.set_xticks([])
-plt.show()
+#plt.show()
 writefile = name + '.png'
 plt.savefig(writefile)
 plt.close()

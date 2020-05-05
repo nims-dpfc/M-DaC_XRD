@@ -6,11 +6,12 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
+#__author__ = "nagao"
 
 """txt2rawXML_for_RIGAKUimg.py
 
 This module extracts raw parameter from
-text data file by creating an RIGAKUimg file.
+RIGAKU img text file.
 
 Copyright (c) 2019, Data PlatForm Center, NIMS
 This software is released under the MIT License.
@@ -21,8 +22,8 @@ Example
     Parameters
     ----------
     inputfile : RIGAKU img text file
-    templatefile : template file for RIGAKU img raw parameter Data
-    outputfile : output file (XML)
+    templatefile : template file for RIGAKU img raw Data
+    outputfile : output file
 
     $ python txt2rawXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
 
@@ -35,7 +36,7 @@ import xml.etree.ElementTree as ET
 import codecs
 
 
-def make_xml(key, value, channel):
+def make_xml(key, value, channel, prefix):
     """This function appends XML node
 
     Parameters
@@ -44,14 +45,19 @@ def make_xml(key, value, channel):
     value: meta value
     channel: HEADER INFORMATION = 0
              Numeric Data Info > 0
+    prefix: meta[@key="DETECTOR_NAMES"].text
 
     """
     subnode = dom.createElement('meta')
     subnode.appendChild(dom.createTextNode(value))
     subnode_attr = dom.createAttribute('key')
-    subnode_attr.value = key
+    if re.match(r'%DETECTOR_NAMES%_', key) != None:
+        prefix_value = "%DETECTOR_NAMES%_"
+        prefix_key = key.replace(prefix_value, prefix)
+    else:
+        prefix_key = key
+    subnode_attr.value = prefix_key
     subnode.setAttributeNode(subnode_attr)
-
     subnode_attr = dom.createAttribute('type')
     typename = template.find('meta[@key="{value}"]'.format(value=key))
     if typename is not None:
@@ -86,7 +92,7 @@ if __name__ == "__main__":
     columns = []
     metas = template.findall('meta')
     for meta in metas:
-        columns.append(meta.attrib["key"])
+       columns.append(meta.attrib["key"])
     dom = xml.dom.minidom.Document()
     metadata = dom.createElement('metadata')
     dom.appendChild(metadata)
@@ -95,6 +101,7 @@ if __name__ == "__main__":
     maxcolumn = 1
     metapart = "header"
     infopart = 0
+    prefix = ""
     with codecs.open(readfile, 'r', 'utf-8', 'ignore') as f:
         for line in f:
             line = line.strip()
@@ -108,11 +115,16 @@ if __name__ == "__main__":
                 lines = [item.strip() for item in lines]
                 key = lines[0]
                 value = lines[1]
+                if key == "DETECTOR_NAMES":
+                    prefix = value
+                if len(prefix) > 0:
+                    prefix_value = "%DETECTOR_NAMES%_"
+                    key = key.replace(prefix, prefix_value)
                 if 2 < len(lines):
                     for index, item in enumerate(lines):
                         if 1 < index:
                             value = value + ':' + item
-                make_xml(key, value, channel)
+                make_xml(key, value, channel, prefix)
 
             elif metapart == "numericData":
                 if line == "//Numeric Data":

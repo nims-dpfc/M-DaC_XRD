@@ -6,11 +6,12 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
+#__author__ = "nagao"
 
 """raw2primaryXML_for_RIGAKUimg.py
 
 This module extracts primary parameter from
-RIGAKU img raw parameter file.
+RIGAKU img raw file.
 
 Copyright (c) 2019, Data PlatForm Center, NIMS
 This software is released under the MIT License.
@@ -20,9 +21,9 @@ Example
 
     Parameters
     ----------
-    inputfile : RIGAKU img raw parameter file
-    templatefile : template file for RIGAKU img primary parameter Data
-    outputfile : output file (primary parameter file (XML))
+    inputfile : RIGAKU img raw file
+    templatefile : template file for RIGAKU img primary parameter
+    outputfile : output file (primary parameter (XML))
 
     $ python raw2primaryXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
 
@@ -35,7 +36,7 @@ from datetime import datetime
 import codecs
 
 
-def registdf(key, channel, value, metadata, unitlist, template):
+def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
     column = key
     value_unit = ""
     tempflag = 1
@@ -47,7 +48,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
             unitcolumn = template.find('meta[@key="{value}"][@unit]'.format(value=key))
             transition = 0
             if unitcolumn is not None:
-                value = arrayvalue[0]
+                value = arrayvalue[0] 
                 if key == "SOURCE_WAVELENGTH":
                     value_unit = unitcolumn.get("unit")
                     value = arrayvalue[1]
@@ -72,28 +73,39 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     temp = rawdata.find('meta[@key="CRYSTAL_GONIO_UNITS"]').text
                     tempvalue = temp.split()
                     value_unit = tempvalue[2]
-                elif key == "PXD_DETECTOR_SIZE_X":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
+                elif key == "DETECTOR_SIZE_X":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     value = tempvalue[0]
                     value_unit = unitcolumn.get("unit")
-                elif key == "PXD_DETECTOR_SIZE_Y":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
+                elif key == "DETECTOR_SIZE_Y":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
                     value_unit = unitcolumn.get("unit")
-                elif key == "PXD_GONIO_VALUE2":
-                    temp = rawdata.find('meta[@key="PXD_GONIO_VALUES"]').text
+                elif key == "GONIO_VALUE2":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_GONIO_VALUES"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
-                    temp = rawdata.find('meta[@key="PXD_GONIO_UNITS"]').text
+                    text = prefix_key
+                    prefix_unit = re.sub('VALUES$',"UNITS",text)
+#                    print ("####",text_mod)
+                    temp = rawdata.find('meta[@key="' + prefix_unit + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_GONIO_UNITS"]').text
                     tempvalue = temp.split()
                     value_unit = tempvalue[1]
-                elif key == "PXD_GONIO_VALUE6":
-                    temp = rawdata.find('meta[@key="PXD_GONIO_VALUES"]').text
+                elif key == "GONIO_VALUE6":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_GONIO_VALUES"]').text
                     tempvalue = temp.split()
                     value = tempvalue[5]
-                    temp = rawdata.find('meta[@key="PXD_GONIO_UNITS"]').text
+                    text = prefix_key
+                    prefix_unit = re.sub('VALUES$',"UNITS",text)
+                    temp = rawdata.find('meta[@key="' + prefix_unit + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_GONIO_UNITS"]').text
                     tempvalue = temp.split()
                     value_unit = tempvalue[5]
                 elif key == "X_STAGE_VALUE":
@@ -111,14 +123,17 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     tempvalue = temp.split()
                     value_unit = tempvalue[1]
                 elif key == "PIXEL_SIZE_X":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
+#                    print("!!=",prefix_key)
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     size = rawdata.find('meta[@key="SIZE1"]').text
                     value = float(tempvalue[0]) / float(size)
                     value_unit = unitcolumn.get("unit")
 
                 elif key == "PIXEL_SIZE_Y":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     size = rawdata.find('meta[@key="SIZE2"]').text
                     value = float(tempvalue[1]) / float(size)
@@ -159,36 +174,44 @@ def registdf(key, channel, value, metadata, unitlist, template):
                     temp = rawdata.find('meta[@key="CRYSTAL_GONIO_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + str(int(float(tempvalue[6]))) + " " + str(int(float(tempvalue[7]))) + " " + str(int(float(tempvalue[8]))) + ")"
-                elif key == "PXD_DETECTOR_DIMENSION_X":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_DIMENSIONS"]').text
+                elif key == "DETECTOR_DIMENSION_X":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_DIMENSIONS"]').text
                     tempvalue = temp.split()
                     value = tempvalue[0]
-                elif key == "PXD_DETECTOR_DIMENSION_Y":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_DIMENSIONS"]').text
+                elif key == "DETECTOR_DIMENSION_Y":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_DIMENSIONS"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
-                elif key == "PXD_DETECTOR_VECTOR_X":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_VECTORS"]').text
+                elif key == "DETECTOR_VECTOR_X":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + tempvalue[0] + " " + tempvalue[1] + " " + tempvalue[2] + ")"
-                elif key == "PXD_DETECTOR_VECTOR_Y":
-                    temp = rawdata.find('meta[@key="PXD_DETECTOR_VECTORS"]').text
+                elif key == "DETECTOR_VECTOR_Y":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + tempvalue[3] + " " + tempvalue[4] + " " + tempvalue[5] + ")"
-                elif key == "PXD_SPATIAL_BEAM_POSITION_X":
-                    temp = rawdata.find('meta[@key="PXD_SPATIAL_BEAM_POSITION"]').text
+                elif key == "SPATIAL_BEAM_POSITION_X":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_SPATIAL_BEAM_POSITION"]').text
                     tempvalue = temp.split()
                     value = tempvalue[0]
-                elif key == "PXD_SPATIAL_BEAM_POSITION_Y":
-                    temp = rawdata.find('meta[@key="PXD_SPATIAL_BEAM_POSITION"]').text
+                elif key == "SPATIAL_BEAM_POSITION_Y":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_SPATIAL_BEAM_POSITION"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
-                elif key == "PXD_GONIO_VECTOR2":
-                    temp = rawdata.find('meta[@key="PXD_GONIO_VECTORS"]').text
+                elif key == "GONIO_VECTOR2":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_GONIO_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + str(int(float(tempvalue[3]))) + " " + str(int(float(tempvalue[4]))) + " " + str(int(float(tempvalue[5]))) + ")"
-                elif key == "PXD_GONIO_VECTOR6":
-                    temp = rawdata.find('meta[@key="PXD_GONIO_VECTORS"]').text
+                elif key == "GONIO_VECTOR6":
+                    temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
+#                    temp = rawdata.find('meta[@key="PXD_GONIO_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + str(int(float(tempvalue[15]))) + " " + str(int(float(tempvalue[16]))) + " " + str(int(float(tempvalue[17]))) + ")"
                 elif key == "X_STAGE_VECTOR":
@@ -259,7 +282,7 @@ def registdf(key, channel, value, metadata, unitlist, template):
 
 def regist(column, key, rawdata, metadata, channel, value, unitlist, template):
     if column in rawcolumns:
-        registdf(key, channel, value, metadata, unitlist, template)
+        registdf(key, channel, value, metadata, unitlist, template, column)
     return metadata
 
 
@@ -301,9 +324,9 @@ if __name__ == "__main__":
     dom.appendChild(metadata)
     count = 0
 
-    metalist = {"Year": "PXD_CREATE_DATETIME",
-                "Month": "PXD_CREATE_DATETIME",
-                "Day": "PXD_CREATE_DATETIME",
+    metalist = {"Year": "%DETECTOR_NAMES%_CREATE_DATETIME",
+                "Month": "%DETECTOR_NAMES%_CREATE_DATETIME",
+                "Day": "%DETECTOR_NAMES%_CREATE_DATETIME",
                 "HEADER_BYTES": "HEADER_BYTES",
                 "BYTE_ORDER":"BYTE_ORDER",
                 "SIZE1":"SIZE1",
@@ -326,32 +349,37 @@ if __name__ == "__main__":
                 "CRYSTAL_GONIO_VECTOR3":"CRYSTAL_GONIO_VECTORS",
                 "CRYSTAL_GONIO_VALUE3":"CRYSTAL_GONIO_VALUES",
                 "DETECTOR_NAMES":"DETECTOR_NAMES",
-                "PXD_DETECTOR_DIMENSION_X":"PXD_DETECTOR_DIMENSIONS",
-                "PXD_DETECTOR_DIMENSION_Y":"PXD_DETECTOR_DIMENSIONS",
-                "PXD_DETECTOR_SIZE_X":"PXD_DETECTOR_SIZE",
-                "PXD_DETECTOR_VECTOR_X":"PXD_DETECTOR_VECTORS",
-                "PXD_DETECTOR_SIZE_Y":"PXD_DETECTOR_SIZE",
-                "PXD_DETECTOR_VECTOR_Y":"PXD_DETECTOR_VECTORS",
+                "DETECTOR_DIMENSION_X":"%DETECTOR_NAMES%_DETECTOR_DIMENSIONS",
+                "DETECTOR_DIMENSION_Y":"%DETECTOR_NAMES%_DETECTOR_DIMENSIONS",
+                "DETECTOR_SIZE_X":"%DETECTOR_NAMES%_DETECTOR_SIZE",
+                "DETECTOR_VECTOR_X":"%DETECTOR_NAMES%_DETECTOR_VECTORS",
+                "DETECTOR_SIZE_Y":"%DETECTOR_NAMES%_DETECTOR_SIZE",
+                "DETECTOR_VECTOR_Y":"%DETECTOR_NAMES%_DETECTOR_VECTORS",
                 "DARK_PEDESTAL":"DARK_PEDESTAL",
-                "PXD_SPATIAL_BEAM_POSITION_X":"PXD_SPATIAL_BEAM_POSITION",
-                "PXD_SPATIAL_BEAM_POSITION_Y":"PXD_SPATIAL_BEAM_POSITION",
-                "PXD_GONIO_NUM_VALUES":"PXD_GONIO_NUM_VALUES",
-                "PXD_GONIO_VALUE2":"PXD_GONIO_VALUES",
-                "PXD_GONIO_VECTOR2":"PXD_GONIO_VECTORS",
-                "PXD_GONIO_VALUE6":"PXD_GONIO_VALUES",
-                "PXD_GONIO_VECTOR6":"PXD_GONIO_VECTORS",
+                "SPATIAL_BEAM_POSITION_X":"%DETECTOR_NAMES%_SPATIAL_BEAM_POSITION",
+                "SPATIAL_BEAM_POSITION_Y":"%DETECTOR_NAMES%_SPATIAL_BEAM_POSITION",
+                "GONIO_NUM_VALUES":"%DETECTOR_NAMES%_GONIO_NUM_VALUES",
+                "GONIO_VALUE2":"%DETECTOR_NAMES%_GONIO_VALUES",
+                "GONIO_VECTOR2":"%DETECTOR_NAMES%_GONIO_VECTORS",
+                "GONIO_VALUE6":"%DETECTOR_NAMES%_GONIO_VALUES",
+                "GONIO_VECTOR6":"%DETECTOR_NAMES%_GONIO_VECTORS",
                 "X_STAGE_VALUE":"XY_STAGE_VALUES",
                 "X_STAGE_VECTOR":"XY_STAGE_VECTORS",
                 "Y_STAGE_VALUE":"XY_STAGE_VALUES",
                 "Y_STAGE_VECTOR":"XY_STAGE_VECTORS",
-                "PIXEL_SIZE_X":"PXD_DETECTOR_SIZE",
-                "PIXEL_SIZE_Y":"PXD_DETECTOR_SIZE"}
+                "PIXEL_SIZE_X":"%DETECTOR_NAMES%_DETECTOR_SIZE",
+                "PIXEL_SIZE_Y":"%DETECTOR_NAMES%_DETECTOR_SIZE"}
     columns_unique = list(dict.fromkeys(columns))
     unitlist = []
     maxcolumn = 0
+    prefix = rawdata.find('meta[@key="DETECTOR_NAMES"]').text
     for k in columns_unique:
         if k in metalist:
             v = metalist[k]
+            if re.match(r'%DETECTOR_NAMES%_', v) != None:
+                prefix_value = "%DETECTOR_NAMES%_"
+                prefix_key = v.replace(prefix_value, prefix)
+                v = prefix_key
             tempcolumn = len(rawdata.findall('meta[@key="{value}"]'.format(value=v)))-1
             if maxcolumn < tempcolumn + 1:
                 maxcolumn = tempcolumn + 1

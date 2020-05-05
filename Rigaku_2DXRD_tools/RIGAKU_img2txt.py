@@ -23,7 +23,6 @@ Example
     ----------
     inputfile : RIGAKU img binary file
         Measurement data file measured by RIGAKU
-    outputfile : formatted numerical data (csv)
 
     $ python RIGAKU_img2txt.py [inputfile]
 
