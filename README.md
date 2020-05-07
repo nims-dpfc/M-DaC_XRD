@@ -1,6 +1,6 @@
 # “NIMS Materials Data Conversion Tools (M-DaC)”
 
-The National Institute for Materials Science (hereafter NIMS) develops high value-adding technologies and efficient techniques for collecting test data as a part of materials research. The “NIMS Materials Data Conversion Tools (M-DaC),” which is provided with this development, refers to programs and source code that can (1) automatically extract the principle requirements and metadata of tests developed in cooperation with measurement instrument manufacturers and then automate the translation (decoding) thereof, as well as (2) perform Schema-on-Read decoding of multidimensional arrays of numerical data.
+The National Institute for Materials Science (hereafter NIMS) develops high value-adding technologies and efficient techniques for collecting test data as a part of materials research. The “NIMS Materials Data Conversion Tools (__M-DaC__),” which is provided with this development, refers to programs and source code that can (1) automatically extract the principle requirements and metadata of tests developed in cooperation with measurement instrument manufacturers and then automate the translation (decoding) thereof, as well as (2) perform Schema-on-Read decoding of multidimensional arrays of numerical data.
 
 We hereby release the trial program, trial source code, and source data, etc. (hereafter “the Program”), free of charge, so that they may be used widely by researchers to promote related technological developments.
 
@@ -41,13 +41,13 @@ We hereby release the trial program, trial source code, and source data, etc. (h
 
 ## Terms of Use and License
 
-- Data and articles within the Program with “CC-BY-SA” in the License field may be used under the Creative Commons Attribution-ShareAlike 4.0 International license.
+- Data and articles within the Program with “__CC-BY-SA__” in the License field may be used under the Creative Commons Attribution-ShareAlike 4.0 International license.
 
-- Trial source code within the Program with “MIT License” in the License field may be used under the MIT License as indicated separately in LICENSE_MIT.txt.
+- Trial source code within the Program with “__MIT License__” in the License field may be used under the MIT License as indicated separately in "__LICENSE_MIT.txt__".
 
 - Trial programs by ULVAC-PHI, Inc. may be used within the scope of their license agreement, indicated separately.
 
-- In more detail, please read the following license agreement; "Terms of Use and License.md"
+- In more detail, please read the following license agreement; "__Terms of Use and License.md__"
 
 <br />
 
