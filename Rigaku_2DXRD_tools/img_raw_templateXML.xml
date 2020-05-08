@@ -34,27 +34,27 @@
   <meta key="CRYSTAL_HUMIDITY_SAMPLE" type="String"/>
   <meta key="DETECTOR_NUMBER" type="String"/>
   <meta key="DETECTOR_NAMES" type="String"/>
-  <meta key="PXD_DETECTOR_DIMENSIONS" type="String"/>
-  <meta key="PXD_DETECTOR_SIZE" type="String"/>
-  <meta key="PXD_DETECTOR_VECTORS" type="String"/>
-  <meta key="PXD_NONUNF_TYPE" type="String"/>
-  <meta key="PXD_NONUNF_INFO" type="String"/>
-  <meta key="PXD_SPATIAL_DISTORTION_TYPE" type="String"/>
-  <meta key="PXD_SPATIAL_DISTORTION_INFO" type="String"/>
-  <meta key="PXD_SPATIAL_DISTORTION_VECTORS" type="String"/>
-  <meta key="PXD_DETECTOR_IDENTIFICATION" type="String"/>
-  <meta key="PXD_TAPER_ORIENTATION" type="String"/>
-  <meta key="PXD_UNBINNED_BEAM_POSITION" type="String"/>
-  <meta key="PXD_UNBINNED_DIMENSIONS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_DIMENSIONS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SIZE" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_VECTORS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_NONUNF_TYPE" type="String"/>
+  <meta key="%DETECTOR_NAMES%_NONUNF_INFO" type="String"/>
+  <meta key="%DETECTOR_NAMES%_SPATIAL_DISTORTION_TYPE" type="String"/>
+  <meta key="%DETECTOR_NAMES%_SPATIAL_DISTORTION_INFOg" type="String"/>
+  <meta key="%DETECTOR_NAMES%_SPATIAL_DISTORTION_VECTORS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_IDENTIFICATION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_TAPER_ORIENTATION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_UNBINNED_BEAM_POSITION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_UNBINNED_DIMENSIONS" type="String"/>
   <meta key="DARK_PEDESTAL" type="String"/>
-  <meta key="PXD_SPATIAL_BEAM_POSITION" type="String"/>
-  <meta key="PXD_GONIO_NUM_VALUES" type="String"/>
-  <meta key="PXD_GONIO_NAMES" type="String"/>
-  <meta key="PXD_GONIO_VECTORS" type="String"/>
-  <meta key="PXD_GONIO_VALUES" type="String"/>
-  <meta key="PXD_GONIO_UNITS" type="String"/>
-  <meta key="PXD_GONIO_DESCRIPTION" type="String"/>
-  <meta key="PXD_DETECTOR_IMAGE_DIRECTION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_SPATIAL_BEAM_POSITION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_GONIO_NUM_VALUES" type="String"/>
+  <meta key="%DETECTOR_NAMES%_GONIO_NAMES" type="String"/>
+  <meta key="%DETECTOR_NAMES%_GONIO_VECTORS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_GONIO_VALUES" type="String"/>
+  <meta key="%DETECTOR_NAMES%_GONIO_UNITS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_GONIO_DESCRIPTION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_IMAGE_DIRECTION" type="String"/>
   <meta key="ROTATION" type="String"/>
   <meta key="ROTATION_VECTOR" type="String"/>
   <meta key="ROTATION_AXIS_NAME" type="String"/>
@@ -71,30 +71,30 @@
   <meta key="XY_STAGE_UNITS" type="String"/>
   <meta key="XY_STAGE_VALUES" type="String"/>
   <meta key="XY_STAGE_VECTORS" type="String"/>
-  <meta key="PXD_DETECTOR_DESCRIPTION" type="String"/>
-  <meta key="PXD_DETECTOR_SERVERVERSION" type="String"/>
-  <meta key="PXD_CREATE_DATETIME" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_TOTALMODULES" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_BIT_SHIFT" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_DATAMODE" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_EXPMODE" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_EXPFRAME" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_EXPTIME" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_EXPTRGDELAY" type="String"/>
-  <meta key="PXD_DETECTOR_ACQUISITION_EXPINTERVAL" type="String"/>
-  <meta key="PXD_DETECTOR_IMAGE_CORRECTION_NAMES" type="String"/>
-  <meta key="PXD_DETECTOR_IMAGE_CORRECTION_FLAGS" type="String"/>
-  <meta key="PXD_DETECTOR_OPTIONS" type="String"/>
-  <meta key="PXD_DETECTOR_REGION_OF_INTEREST" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_TEMPERATURES" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_HUMIDITY" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_CORRECTIONTEMP" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_ERRORSTATE" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_LOG_SETUP" type="String"/>
-  <meta key="PXD_DETECTOR_SYSTEM_OWNER" type="String"/>
-  <meta key="PXD_DETECTOR_SETUP_CONFIG_INFO" type="String"/>
-  <meta key="PXD_DETECTOR_SETUP_ANALOG" type="String"/>
-  <meta key="PXD_DETECTOR_SETUP_THRESHOLD" type="String"/>
-  <meta key="PXD_DETECTOR_SETUP_RESOLUTION" type="String"/>
-  <meta key="PXD_DETECTOR_SETUP_ENERGY" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_DESCRIPTION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SERVERVERSION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_CREATE_DATETIME" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_TOTALMODULES" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_BIT_SHIFT" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_DATAMODE" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_EXPMODE" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_EXPFRAME" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_EXPTIME" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_EXPTRGDELAY" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_ACQUISITION_EXPINTERVAL" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_IMAGE_CORRECTION_NAMES" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_IMAGE_CORRECTION_FLAGS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_OPTIONS" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_REGION_OF_INTEREST" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_TEMPERATURES" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_HUMIDITY" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_CORRECTIONTEMP" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_ERRORSTATE" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_LOG_SETUP" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SYSTEM_OWNER" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SETUP_CONFIG_INFO" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SETUP_ANALOG" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SETUP_THRESHOLD" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SETUP_RESOLUTION" type="String"/>
+  <meta key="%DETECTOR_NAMES%_DETECTOR_SETUP_ENERGY" type="String"/>
 </template>

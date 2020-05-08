@@ -6,7 +6,6 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-#__author__ = "nagao"
 
 """txt2csvforRIGAKUimg.py
 
@@ -26,12 +25,11 @@ Example
     outputfile : output csv file
 
     $ python txt2csvforRIGAKUimg.py [inputfile] [outputfie]
-
 """
+__package__ = "M-DaC_XRD/Rigaku_2DXRD_tools"
+__version__ = "1.0.0"
+
 import argparse
-import csv
-import itertools
-import io
 import os.path
 import codecs
 import numpy

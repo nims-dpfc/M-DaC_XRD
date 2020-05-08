@@ -6,7 +6,6 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-#__author__ = "nagao"
 
 """raw2primaryXML_for_RIGAKUimg.py
 
@@ -22,12 +21,15 @@ Example
     Parameters
     ----------
     inputfile : RIGAKU img raw file
-    templatefile : template file for RIGAKU img primary parameter
-    outputfile : output file (primary parameter (XML))
+    templatefile : template file for RIGAKU img primary Data
+    outputfile : output file
 
     $ python raw2primaryXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
 
 """
+__package__ = "M-DaC_XRD/Rigaku_2DXRD_tools"
+__version__ = "1.0.0"
+
 import argparse
 import xml.dom.minidom
 import re
@@ -46,9 +48,8 @@ def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
         if value is not None:
             arrayvalue = value.split()
             unitcolumn = template.find('meta[@key="{value}"][@unit]'.format(value=key))
-            transition = 0
             if unitcolumn is not None:
-                value = arrayvalue[0] 
+                value = arrayvalue[0]
                 if key == "SOURCE_WAVELENGTH":
                     value_unit = unitcolumn.get("unit")
                     value = arrayvalue[1]
@@ -75,37 +76,30 @@ def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
                     value_unit = tempvalue[2]
                 elif key == "DETECTOR_SIZE_X":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     value = tempvalue[0]
                     value_unit = unitcolumn.get("unit")
                 elif key == "DETECTOR_SIZE_Y":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
                     value_unit = unitcolumn.get("unit")
                 elif key == "GONIO_VALUE2":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_GONIO_VALUES"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
                     text = prefix_key
                     prefix_unit = re.sub('VALUES$',"UNITS",text)
-#                    print ("####",text_mod)
                     temp = rawdata.find('meta[@key="' + prefix_unit + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_GONIO_UNITS"]').text
                     tempvalue = temp.split()
                     value_unit = tempvalue[1]
                 elif key == "GONIO_VALUE6":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_GONIO_VALUES"]').text
                     tempvalue = temp.split()
                     value = tempvalue[5]
                     text = prefix_key
                     prefix_unit = re.sub('VALUES$',"UNITS",text)
                     temp = rawdata.find('meta[@key="' + prefix_unit + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_GONIO_UNITS"]').text
                     tempvalue = temp.split()
                     value_unit = tempvalue[5]
                 elif key == "X_STAGE_VALUE":
@@ -123,9 +117,7 @@ def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
                     tempvalue = temp.split()
                     value_unit = tempvalue[1]
                 elif key == "PIXEL_SIZE_X":
-#                    print("!!=",prefix_key)
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     size = rawdata.find('meta[@key="SIZE1"]').text
                     value = float(tempvalue[0]) / float(size)
@@ -133,7 +125,6 @@ def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
 
                 elif key == "PIXEL_SIZE_Y":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_SIZE"]').text
                     tempvalue = temp.split()
                     size = rawdata.find('meta[@key="SIZE2"]').text
                     value = float(tempvalue[1]) / float(size)
@@ -176,42 +167,34 @@ def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
                     value = "(" + str(int(float(tempvalue[6]))) + " " + str(int(float(tempvalue[7]))) + " " + str(int(float(tempvalue[8]))) + ")"
                 elif key == "DETECTOR_DIMENSION_X":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_DIMENSIONS"]').text
                     tempvalue = temp.split()
                     value = tempvalue[0]
                 elif key == "DETECTOR_DIMENSION_Y":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_DIMENSIONS"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
                 elif key == "DETECTOR_VECTOR_X":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + tempvalue[0] + " " + tempvalue[1] + " " + tempvalue[2] + ")"
                 elif key == "DETECTOR_VECTOR_Y":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_DETECTOR_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + tempvalue[3] + " " + tempvalue[4] + " " + tempvalue[5] + ")"
                 elif key == "SPATIAL_BEAM_POSITION_X":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_SPATIAL_BEAM_POSITION"]').text
                     tempvalue = temp.split()
                     value = tempvalue[0]
                 elif key == "SPATIAL_BEAM_POSITION_Y":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_SPATIAL_BEAM_POSITION"]').text
                     tempvalue = temp.split()
                     value = tempvalue[1]
                 elif key == "GONIO_VECTOR2":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_GONIO_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + str(int(float(tempvalue[3]))) + " " + str(int(float(tempvalue[4]))) + " " + str(int(float(tempvalue[5]))) + ")"
                 elif key == "GONIO_VECTOR6":
                     temp = rawdata.find('meta[@key="' + prefix_key + '"]').text
-#                    temp = rawdata.find('meta[@key="PXD_GONIO_VECTORS"]').text
                     tempvalue = temp.split()
                     value = "(" + str(int(float(tempvalue[15]))) + " " + str(int(float(tempvalue[16]))) + " " + str(int(float(tempvalue[17]))) + ")"
                 elif key == "X_STAGE_VECTOR":
@@ -251,32 +234,6 @@ def registdf(key, channel, value, metadata, unitlist, template, prefix_key):
                 subnode_attr.value = channel
                 subnode.setAttributeNode(subnode_attr)
                 metadata.appendChild(subnode)
-
-            if transition == 1:
-                subnode = dom.createElement('meta')
-                subnode.appendChild(dom.createTextNode(str(value2)))
-                subnode_attr = dom.createAttribute('key')
-                subnode_attr.value = "Transitions"
-                subnode.setAttributeNode(subnode_attr)
-                metadata.appendChild(subnode)
-
-                subnode_attr = dom.createAttribute('type')
-                typename = template.find('meta[@key="Transitions"]')
-                if typename.get("type") is not None:
-                    subnode_attr.value = typename.get("type")
-                else:
-                    subnode_attr.value = "String"
-                subnode.setAttributeNode(subnode_attr)
-                metadata.appendChild(subnode)
-
-                if channel != 0:
-                    subnode_attr = dom.createAttribute('column')
-                    subnode_attr.value = channel
-                    subnode.setAttributeNode(subnode_attr)
-                    metadata.appendChild(subnode)
-
-                transition = 0
-
         return metadata
 
 

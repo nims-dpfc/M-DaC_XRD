@@ -6,7 +6,6 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-#__author__ = "nagao"
 
 """txt2rawXML_for_RIGAKUimg.py
 
@@ -28,6 +27,8 @@ Example
     $ python txt2rawXML_for_RIGAKUimg.py [inputfile] [templatefile] [outputfile]
 
 """
+__package__ = "M-DaC_XRD/Rigaku_2DXRD_tools"
+__version__ = "1.0.0"
 
 import argparse
 import xml.dom.minidom

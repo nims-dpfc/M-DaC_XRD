@@ -26,20 +26,20 @@
   <meta key="CRYSTAL_GONIO_VECTOR3" type="String"/>
   <meta key="CRYSTAL_GONIO_VALUE3" type="Quantity" unit=""/>
   <meta key="DETECTOR_NAMES" type="String"/>
-  <meta key="PXD_DETECTOR_DIMENSION_X" type="Numeric"/>
-  <meta key="PXD_DETECTOR_DIMENSION_Y" type="Numeric"/>
-  <meta key="PXD_DETECTOR_SIZE_X" type="Quantity" unit="mm"/>
-  <meta key="PXD_DETECTOR_VECTOR_X" type="String"/>
-  <meta key="PXD_DETECTOR_SIZE_Y" type="Quantity" unit="mm"/>
-  <meta key="PXD_DETECTOR_VECTOR_Y" type="String"/>
+  <meta key="DETECTOR_DIMENSION_X" type="Numeric"/>
+  <meta key="DETECTOR_DIMENSION_Y" type="Numeric"/>
+  <meta key="DETECTOR_SIZE_X" type="Quantity" unit="mm"/>
+  <meta key="DETECTOR_VECTOR_X" type="String"/>
+  <meta key="DETECTOR_SIZE_Y" type="Quantity" unit="mm"/>
+  <meta key="DETECTOR_VECTOR_Y" type="String"/>
   <meta key="DARK_PEDESTAL" type="Numeric"/>
-  <meta key="PXD_SPATIAL_BEAM_POSITION_X" type="Numeric"/>
-  <meta key="PXD_SPATIAL_BEAM_POSITION_Y" type="Numeric"/>
-  <meta key="PXD_GONIO_NUM_VALUES" type="Numeric"/>
-  <meta key="PXD_GONIO_VALUE2" type="Quantity" unit=""/>
-  <meta key="PXD_GONIO_VECTOR2" type="String"/>
-  <meta key="PXD_GONIO_VALUE6" type="Quantity" unit=""/>
-  <meta key="PXD_GONIO_VECTOR6" type="String"/>
+  <meta key="SPATIAL_BEAM_POSITION_X" type="Numeric"/>
+  <meta key="SPATIAL_BEAM_POSITION_Y" type="Numeric"/>
+  <meta key="GONIO_NUM_VALUES" type="Numeric"/>
+  <meta key="GONIO_VALUE2" type="Quantity" unit=""/>
+  <meta key="GONIO_VECTOR2" type="String"/>
+  <meta key="GONIO_VALUE6" type="Quantity" unit=""/>
+  <meta key="GONIO_VECTOR6" type="String"/>
   <meta key="X_STAGE_VALUE" type="Quantity" unit=""/>
   <meta key="X_STAGE_VECTOR" type="String"/>
   <meta key="Y_STAGE_VALUE" type="Quantity" unit=""/>

@@ -6,7 +6,6 @@
 # This software is released under the MIT License.
 # -------------------------------------------------
 # coding: utf-8
-#__author__ = "nagao"
 
 """RIGAKU_img2txt.py
 
@@ -27,6 +26,9 @@ Example
     $ python RIGAKU_img2txt.py [inputfile]
 
 """
+__package__ = "M-DaC_XRD/Rigaku_2DXRD_tools"
+__version__ = "1.0.0"
+
 import argparse
 import os.path
 import fabio
